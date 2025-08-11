@@ -1,0 +1,356 @@
+<?php session_start();
+$notification = 0;
+?>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My| Restaurant</title>
+    <link rel="stylesheet" href="../bootstrap-5.3.7-dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="style1.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<style>
+    * {
+        font-family: "Playfair Display", serif;
+    }
+
+    .categorie {
+        background: linear-gradient(rgb(0, 0, 0, 0.7), rgb(0, 0, 0, 0.7)), url('../Clients/images/BG.png') center no-repeat;
+        background-size: cover;
+    }
+
+    #carouselNews .carousel-item {
+        height: 500px;
+    }
+
+    #carouselNews .carousel-item img {
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+        display: block;
+    }
+
+    .presentation1 .card {
+        border: none;
+        box-shadow: 0 4px 12px rgba(0, 255, 0, 0.26);
+    }
+
+    img {
+        object-fit: cover;
+        transition: 0.5s ease;
+    }
+
+    img:hover {
+        transform: scale(1.05);
+    }
+
+    /* animation du carousel */
+    @keyframes fadeLeft {
+        0% {
+            transform: translateY(-5rem);
+        }
+    }
+
+    @keyframes fadeUp {
+        0% {
+            transform: scale(1.05);
+        }
+    }
+
+    .carousel-image {
+        height: 300px;
+    }
+
+    .carousel-texte {
+        color: brown;
+        flex: 1 1 40rem;
+        animation: fadeLeft .3s linear .3s backwards;
+    }
+
+    .carousel-image img {
+        height: 100%;
+        flex: 1 1 40rem;
+        animation: fadeUp .4s linear .4s backwards;
+    }
+
+    .equipe .col-md-3 {
+        width: 320px;
+        height: 200px;
+    }
+
+    .equipe .col-md-3 img {
+        width: 100%;
+        height: 100%;
+        /* box-shadow: 0 4px 12px rgb(0, 0, 0, 0.5); */
+        border-radius: 10px;
+    }
+
+    .section_videos {
+        clear: both;
+        margin-top: 50px;
+        margin-bottom: 50px;
+    }
+
+    .videos_texte {
+        margin-top: 30px;
+        text-transform: uppercase;
+        font-size: 2rem;
+        color: green;
+
+    }
+
+    .siby_videos {
+        background-color: black;
+        box-shadow: rgba(0, 255, 0, 0.26);
+        margin-right: 5px;
+        margin-bottom: 10px;
+        width: 250px;
+        height: 200px;
+    }
+
+    .siby_videos video {
+        width: 100%;
+        height: 100%;
+    }
+
+    footer {
+        clear: both;
+    }
+</style>
+
+<body>
+    <?php include("nav1.php"); ?>
+    <section class="container-fluid">
+        <div id="carouselNews" class="carousel slide" data-bs-ride="carousel" data-bs-interval="3000">
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carouselNews" data-bs-slide-to="0" class="active"></button>
+                <button type="button" data-bs-target="#carouselNews" data-bs-slide-to="1"></button>
+            </div>
+
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="../Clients/siby_images/center.jpg" class="d-block w-100" alt="Image 1">
+                    <div class="carousel-caption d-none d-md-block" style="background-color: rgb(0, 0, 0, 0.7);">
+                        <h5>First slide label</h5>
+                        <p>Some representative placeholder content for the first slide.</p>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="../Clients/siby_images/center2.jpg" class="d-block w-100" alt="Image 2">
+                    <div class="carousel-caption d-none d-md-block" style="background-color: rgb(0, 0, 0, 0.7);">
+                        <h5>First slide label</h5>
+                        <p>Some representative placeholder content for the first slide.</p>
+                    </div>
+                </div>
+            </div>
+
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselNews" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon"></span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselNews" data-bs-slide="next">
+                <span class="carousel-control-next-icon"></span>
+            </button>
+        </div>
+    </section>
+    <div class="titre text-center w-100 border-top" style="border-radius: 50px 50px 0 0;">
+        <h1>chaud boullant</h1>
+        <p>Decouvez les actualité Reveille Matinal</p>
+    </div>
+    <section class="presentation1 my-5">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="card col-md-4 m-2" style="width: 300px;">
+                    <img src="images/gallery-1.jpg" class="w-100" style=" height:200px;">
+                    <div class="card-footer">
+                        <h2>Coffee</h2>
+                    </div>
+                </div>
+
+
+                <div class="card col-md-4 m-2" style="width: 300px;">
+                    <img src="images/burger-frenchfries.png" class="w-100" style=" height:200px;" alt="">
+                    <div class="card-footer">
+                        <h2>burger</h2>
+                    </div>
+                </div>
+
+                <div class="card col-md-4 m-2" style="width: 300px;">
+                    <img src="images/refreshment.png" class="w-100" style=" height:200px;" alt="">
+                    <div class="card-footer">
+                        <h2>Jus frais</h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section style="background: url('../Clients/siby_images/design.png');">
+        <div class="container-fluid">
+            <div class="row" style="background-color: rgb(255, 255, 255,0.5);">
+                <marquee behavior="scroll" direction="right" scrollamount="15">
+                    <img src="../Clients/images/siby2.png" class="col-6" style="width: 200px;">
+                </marquee>
+                <h2 class="text-center text-success" style="font-size: 3rem;">Vous avez le choix</h2>
+                <marquee behavior="scroll" direction="left" scrollamount="15">
+                    <img src="../Clients/images/siby3.png" class="col-6" style="width: 200px;">
+                </marquee>
+
+            </div>
+        </div>
+
+    </section>
+    <!-- galery -->
+    <div class="titre">
+        <h1>petite ou grosse faim ???</h1>
+    </div>
+    <!-- galery -->
+    <section class="equipe container-fluid bg-light mt-5" style="margin: 0 10px;">
+        <div class="container py-2">
+            <h2 class="text-center mb-4 pb-4 border-bottom">Decouvrez nos meuilleurs Délices</h2>
+
+            <div id="carouselGallery" class="carousel slide" data-bs-ride="carousel" data-bs-interval="5000">
+                <div class="carousel-inner">
+
+                    <!-- Slide 1 -->
+                    <div class="carousel-item active">
+                        <div class="row row1 g-4 justify-content-center">
+                            <div class="col-md-3 col-6 text-center">
+                                <img src="../Clients/siby_images/galery (2).jpg" class="img-fluid player-img" >
+                            </div>
+                            <div class="col-md-3 col-6 text-center">
+                                <img src="../Clients/siby_images/galery (3).jpg" class="img-fluid player-img">
+                            </div>
+                            <div class="col-md-3 col-6 text-center">
+                                <img src="../Clients/siby_images/galery (4).jpg" class="img-fluid player-img" >
+                            </div>
+                            <div class="col-md-3 col-6 text-center">
+                                <img src="../Clients/siby_images/galery (5).jpg" class="img-fluid player-img" >
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Slide 2 -->
+                    <div class="carousel-item">
+                        <div class="row g-4 justify-content-center">
+                            <div class="col-md-3 col-6 text-center">
+                                <img src="../Clients/siby_images/galery (6).jpg" class="img-fluid player-img" >
+                            </div>
+                            <div class="col-md-3 col-6 text-center">
+                                <img src="../Clients/siby_images/galery (7).jpg" class="img-fluid player-img" >
+                            </div>
+                            <div class="col-md-3 col-6 text-center">
+                                <img src="../Clients/siby_images/galery (8).jpg" class="img-fluid player-img" >
+                            </div>
+                            <div class="col-md-3 col-6 text-center">
+                                <img src="../Clients/siby_images/galery (9).jpg" class="img-fluid player-img" >
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselGallery" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon bg-dark rounded-circle"></span>
+                    <span class="visually-hidden">Précédent</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselGallery" data-bs-slide="next">
+                    <span class="carousel-control-next-icon bg-dark rounded-circle"></span>
+                    <span class="visually-hidden">Suivant</span>
+                </button>
+            </div>
+        </div>
+    </section>
+    <!-- gateaux -->
+    <section class="equipe container-fluid bg-light my-4" style="margin: 0 10px;">
+        <h2 class="text-center mb-4 pb-4 border-bottom">Nos patisséries</h2>
+        <div class="container py-2">
+            <div id="carouselGallery" class="carousel slide" data-bs-ride="carousel" data-bs-interval="5000">
+                <div class="carousel-inner">
+
+                    <!-- Slide 1 -->
+                    <div class="carousel-item active">
+                        <div class="row row1 g-4 justify-content-center">
+                            <div class="col-md-3 col-6 text-center">
+                                <img src="../Clients/siby_images/gateaux (1).jpg" class="img-fluid player-img" alt="Lamine Yamal">
+                                <div class="player-name">Lamine Yamal</div>
+                            </div>
+                            <div class="col-md-3 col-6 text-center">
+                                <img src="../Clients/siby_images/gateaux (2).jpg" class="img-fluid player-img" alt="Pedri">
+                            </div>
+                            <div class="col-md-3 col-6 text-center">
+                                <img src="../Clients/siby_images/gateaux (3).jpg" class="img-fluid player-img" alt="Lewandowski">
+                            </div>
+                            <div class="col-md-3 col-6 text-center">
+                                <img src="../Clients/siby_images/gateaux (4).jpg" class="img-fluid player-img" alt="João Félix">
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Slide 2 -->
+                    <div class="carousel-item">
+                        <div class="row g-4 justify-content-center">
+                            <div class="col-md-3 col-6 text-center">
+                                <img src="../Clients/siby_images/gateaux (5).jpg" class="img-fluid player-img" alt="De Jong">
+                            </div>
+                            <div class="col-md-3 col-6 text-center">
+                                <img src="../Clients/siby_images/gateaux (6).jpg" class="img-fluid player-img" alt="Gavi">
+                            </div>
+                            <div class="col-md-3 col-6 text-center">
+                                <img src="../Clients/siby_images/gateaux (7).jpg" class="img-fluid player-img" alt="Araujo">
+                            </div>
+                            <div class="col-md-3 col-6 text-center">
+                                <img src="../Clients/siby_images/gateaux (8).jpg" class="img-fluid player-img" alt="Balde">
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselGallery" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon bg-dark rounded-circle"></span>
+                    <span class="visually-hidden">Précédent</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselGallery" data-bs-slide="next">
+                    <span class="carousel-control-next-icon bg-dark rounded-circle"></span>
+                    <span class="visually-hidden">Suivant</span>
+                </button>
+            </div>
+        </div>
+        <div class="float-end m-4">
+            <a href="menu.php" class="btn btn-outline-success">Aller au restaurant</a>
+        </div>
+    </section>
+
+    <!-- quelques videos -->
+    <section class="section_videos">
+        <div class="container">
+            <h2 class="text-center mb-5 videos_texte">Decouvrez notre restaurant avec les starts !</h2>
+            <div class="row justify-content-center">
+                <div class="col-sm-6 col-md-4 col-lg-3 siby_videos">
+                    <video src="./siby_images/video (1).mp4" controls></video>
+                </div>
+                <div class="col-sm-6 col-md-4 col-lg-3 siby_videos">
+                    <video src="./siby_images/video (2).mp4" controls></video>
+                </div>
+                <div class="col-sm-6 col-md-4 col-lg-3 siby_videos">
+                    <video src="./siby_images/video (3).mp4" controls></video>
+                </div>
+                <div class="col-sm-6 col-md-4 col-lg-3 siby_videos">
+                    <video src="./siby_images/video (6).mp4" controls></video>
+                </div>
+                <div class="col-sm-6 col-md-4 col-lg-3 siby_videos">
+                    <video src="./siby_images/video (10).mp4" controls></video>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <?php include('footer.php') ?>
+
+    <script src="../bootstrap-5.3.7-dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

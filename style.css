@@ -1,0 +1,153 @@
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Playwrite+AU+SA:wght@100..400&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/* nav */
+.conn {
+    display: none;
+}
+
+.connexion :hover .conn {
+    display: block;
+
+}
+
+/* nav a:hover{
+    color: brown;
+    border-bottom: 2px solid brown ;
+} */
+/*  */
+.MN {
+    background-color: rgb(172, 172, 172);
+    height: 400px;
+    padding-top: 50px;
+    box-shadow: 0 2px 4px brown;
+}
+
+.MN img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* entete */
+.entete {
+    padding-top: 80px;
+    width: 100%;
+    height: 600px;
+    background: white;
+    background-size: cover;
+}
+
+.entete h1 {
+    font-size: 5rem;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.entete p {
+    color: white;
+    text-align: center;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 1.5rem;
+}
+
+.entete button {
+    display: flex;
+    justify-self: center;
+    margin-top: 20px;
+    padding: 15px;
+    color: white;
+    font-weight: bold;
+    border: none;
+    border-radius: 10px;
+    background-color: brown;
+}
+
+.entete button:hover {
+    background-color: rgba(165, 42, 42, 0.578);
+    transform: scale(1.05);
+
+}
+
+/* titre */
+.titre {
+    margin-top: 50px;
+    width: 100%;
+    text-align: center;
+}
+
+.titre h1 {
+    font-size: 2.5em;
+    text-transform: uppercase;
+}
+
+/* services */
+.services {
+    margin-top: 100px;
+    margin-bottom: 100px;
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 4rem;
+    align-content: center;
+    justify-content: center;
+    background-color: black;
+}
+
+.services div {
+    height: 150px;
+    border-radius: 150px;
+}
+
+.services img {
+    height: 100%;
+    border-radius: 200px;
+    object-fit: cover;
+    overflow: hidden;
+}
+
+/* over div */
+.services div:hover {
+    transition: 0.3s ease-in;
+    transform: scale(1.05);
+}
+.contact h5 {
+    color: white;
+}
+.contact img {
+    width: 50px;
+    padding: 10px;
+}
+
+.produits {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 4rem;
+    align-content: center;
+    justify-content: center;
+    margin: 20px;
+}
+
+.produits ul {
+    margin: 10px;
+}
+
+.produits li {
+    list-style: none;
+    padding: 5px;
+}
+
+.titre2 {
+    margin-top: 20px;
+    text-align: center;
+    color: white;
+}
+
+.titre2 p {
+    padding: 10px;
+}
